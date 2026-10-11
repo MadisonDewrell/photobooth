@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #F9D1DF;
+}
+
+.screen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #F9D1DF;
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    width: 850px;
+    max-width: 85%;
+}
+
+.button {
+    width: 420px;
+    max-width: 55%;
+
+    cursor: pointer;
+    user-select: none;
+
+    animation: pulseFloat 3.2s ease-in-out infinite;
+}
+
+.button:active {
+    animation: none;
+    transform: scale(0.94);
+}
+
+@keyframes pulseFloat {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-7px) scale(1.05);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+#directions h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+#directions p {
+    font-size: 34px;
+    margin: 10px;
+}
+
+.directions-timer {
+    margin-top: 40px;
+    font-size: 28px;
+}
+
+#directionsNumber {
+    font-size: 45px;
+}
+
+.countdownImage{
+    width: 55%;
+    max-width: 700px;
+
+    margin-bottom: 20px;
+}
+
+#countdownNumber{
+    font-size: 45px;
+    margin: 0;
+    color: #6B4054;
+    animation: pop 1s ease-in-out infinite;
+}
+
+#countdown p {
+    font-size: 45px;
+}
+
+.preview-placeholder {
+    width: 550px;
+    height: 350px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 5px dashed black;
+    margin: 25px;
+}
+
+.preview-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+.menuButton {
+    width: 180px;       /* adjust this to whatever looks best */
+    cursor: pointer;
+    user-select: none;
+
+    transition: transform .2s;
+}
+
+.menuButton:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.menuButton:active {
+    transform: scale(.96);
+}
+
+.directionsImage {
+    width: 70%;
+    max-width: 900px;
+    display: block;
+    margin: 0;
+}
+
+.directionsCountdown {
+    margin-top: -120px;
+    font-size: 45px;
+    font-weight: bold;
+    color: #6B4054;
+    animation: pop 1s ease-in-out infinite;
+}
+
+#directions {
+    transform: translateY(-80px);
+}
+
+
+
+@keyframes pop{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.15);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+#photoProgress {
+    font-size: 28px;
+    color: #6B4054;
+    margin-top: 10px;
+}
+
+.photoStrip {
+    width: auto;
+    height: 72vh;
+    max-width: 80vw;
+
+    padding: 0;
+    margin: 0 auto;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+}
+
+.photoStrip img {
+    display: block;
+
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+
+    object-fit: contain;
+    background-color: white;
+}
+
+#preview {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#photo1 {
+    display: block;
+}
+
+#photo2,
+#photo3,
+#photo4 {
+    display: none;
+}
+
+.stripFooter {
+    min-height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    color: #6B4054;
+    text-align: center;
+}
+
+.photoProgress{
+    width: 240px;
+    margin-top: 15px;
+}
+
+/* WEBCAM */
+
+.cameraFrame {
+    width: 600px;
+    max-width: 75%;
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border: 12px solid white;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(107, 64, 84, 0.25);
+}
+
+#cameraPreview {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    /* Makes the camera preview behave like a mirror */
+    transform: scaleX(-1);
+}
+
+.photoProgress {
+    width: 300px;
+    max-width: 55%;
+    margin-bottom: 10px;
+}
+
+#countdownNumber {
+    width: 45px;
+    height: 140px;
+    min-height: 140px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 45px;
+    line-height: 1;
+    margin: 5px 0 0;
+
+    color: #6B4054;
+}
+
+@media print {
+
+    /* Hide everything on the page */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Show only the photo strip */
+    .photoStrip,
+    .photoStrip * {
+        visibility: visible;
+    }
+
+    /* Move the strip to the top-left of the printed page */
+    .photoStrip {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        margin: 0;
+        box-shadow: none;
+    }
+
+    /* Remove the pink webpage background */
+    body {
+        background: white;
+    }
+
+    /* Hide the print and retake buttons */
+    .preview-buttons {
+        display: none !important;
+    }
+
+    /* Hide the DIGIIMADI heading */
+    #preview > h1 {
+        display: none !important;
+    }
+}
