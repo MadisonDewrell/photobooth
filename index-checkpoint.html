@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>Photo Booth</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="home" class="screen">
+
+        <img
+            src="https://codehs.com/uploads/a3a4a7a2d06ad0a4db9160dff9cc1d65"
+            class="title"
+            alt="Photo booth title">
+
+<img
+    src="https://codehs.com/uploads/22817e8964bb8921cd1a9ff8a887fdee"
+    class="button"
+    id="startButton"
+    alt="Start">
+
+    </div>
+
+<div id="directions" class="screen hidden">
+
+    <img
+        src="https://codehs.com/uploads/23b9ba348e172151d2b7212cee8be1d6"
+        class="directionsImage"
+        alt="Directions">
+
+    <div class="directionsCountdown">
+        <span id="directionsNumber">4</span>
+    </div>
+
+</div>
+
+
+<div id="countdown" class="screen hidden">
+
+    <img
+        id="photoProgress"
+        class="photoProgress"
+        src=""
+        alt="Current photo">
+
+    <div class="cameraFrame">
+        <video
+            id="cameraPreview"
+            autoplay
+            muted
+            playsinline>
+        </video>
+    </div>
+
+    <h1 id="countdownNumber">3</h1>
+
+</div>
+
+    <div id="camera" class="screen hidden">
+
+        <h1>Smile!</h1>
+
+    </div>
+
+
+<div id="preview" class="screen hidden">
+
+    <h1>DIGIIMADI</h1>
+
+    <div class="photoStrip">
+        <img id="photo1" src="https://via.placeholder.com/300x200">
+        <img id="photo2" src="https://via.placeholder.com/300x200">
+        <img id="photo3" src="https://via.placeholder.com/300x200">
+        <img id="photo4" src="https://via.placeholder.com/300x200">
+
+        <div class="stripFooter">
+            
+        </div>
+    </div>
+
+    <div class="preview-buttons">
+
+        <img
+            id="retakeButton"
+            class="menuButton"
+            src="https://codehs.com/uploads/a6aa377f93d428c76479356752ebd521"
+            alt="Retake">
+
+        <img
+            id="printButton"
+            class="menuButton"
+            src="https://codehs.com/uploads/723bb02f74d8101ae0f908b290ffa04d"
+            alt="Print">
+
+    </div>
+
+</div> 
+
+<div id="printing" class="screen hidden">
+
+    <h1>Printing your photo...</h1>
+
+</div>
+
+<div id="thanks" class="screen hidden">
+
+    <h1>Thank you!</h1>
+    <p>Your photo is printing.</p>
+
+</div>
