@@ -1,12 +1,9 @@
 # Raspberry Pi Photo Booth
 
-Custom-built photo booth using a Raspberry Pi 5
-integrates hardware, software, and photography to create a physical Photo Booth.
-
 ## Features
-- Touchscreen interface developed with HTML, CSS, and JavaScript
-- Sony camera integration for photo capture
-- Automated countdown and four-photo sessions
+- Touchscreen UI using with HTML, CSS, and JavaScript
+- Sony camera for photo capturing
+- Countdown and four-photo sessions
 - Custom photo layouts with preview and retake options
 - Photo printing using a Canon SELPHY CP1500
 - Custom wooden enclosure
@@ -27,8 +24,6 @@ Project Status:
 In Development- physical wiring is complete, currently working on updating software for better user experience.
 
 ## Project Photos
-### Front View
-![Front View](images/front.jpg)
+<img height=500 alt="IMG_6321" src="https://github.com/user-attachments/assets/661b9c7a-f20d-4e8e-9df2-54176908dc4f" />
+<img height=500 alt="IMG_6320" src="https://github.com/user-attachments/assets/a59848e1-5d71-4ac3-9254-7ec2213605b3" />
 
-### Internal Components
-![Internal Components](images/back.jpg)
